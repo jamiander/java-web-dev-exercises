@@ -8,8 +8,13 @@ public class WhiteRabbit {
         System.out.println("What are you searching for, darling?");
         String[] aliceQuote = quote.toLowerCase().split("\\s+");
         String word = input.nextLine();
-        if(Arrays.asList(aliceQuote).contains(word.toLowerCase())) {
-            System.out.println(word + " is at the tea party, join us!");
+        String compareWord = word.toLowerCase();
+
+        if (Arrays.asList(aliceQuote).contains(compareWord)) {
+            String newQuote = quote.toLowerCase().replace(compareWord, "");
+            System.out.println(word + " is at the tea party, join us!" +
+                    " The word can be found at index: " + Arrays.asList(aliceQuote).indexOf(compareWord) + "  It is " + word.length() + " characters long.  The new quote is: " + newQuote);
+
         } else {
             System.out.println(word + " is not down the rabbit hole.");
         }
