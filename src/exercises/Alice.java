@@ -8,11 +8,11 @@ public class Alice {
         String word = input.nextLine();
         String compareWord = word.toLowerCase();
         int intIndex = quote.toLowerCase().indexOf(compareWord);
-        if(intIndex == -1) {
-            System.out.println(word + " is not down the rabbit hole.");
-        } else {
+        if(quote.toLowerCase().contains(compareWord) && ) {
             String newQuote = quote.substring(0, intIndex) + quote.substring(intIndex + word.length(), quote.length()-1);
             System.out.println(word + " is at the tea party, join us! Your word can be found at index: " + intIndex + "  It is " + word.length() + " characters long.  The new quote is:  '" + newQuote + "'");
+        } else {
+            System.out.println(word + " is not down the rabbit hole.");
         }
     }
 }
