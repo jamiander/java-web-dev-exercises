@@ -11,7 +11,7 @@ public class Alice {
         if(intIndex == -1) {
             System.out.println(word + " is not down the rabbit hole.");
         } else {
-            String newQuote = quote.toLowerCase().replace(compareWord, "");
+            String newQuote = quote.substring(0, intIndex) + quote.substring(intIndex + word.length(), quote.length()-1);
             System.out.println(word + " is at the tea party, join us! Your word can be found at index: " + intIndex + "  It is " + word.length() + " characters long.  The new quote is:  '" + newQuote + "'");
         }
     }
