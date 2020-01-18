@@ -1,4 +1,4 @@
-package org.launchcode.java.demos.lsn4classes2;
+package exercises.classes2;
 
 public class Teacher {
     private String firstName;

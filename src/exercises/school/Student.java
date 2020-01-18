@@ -5,10 +5,10 @@ package exercises.school;
 
 public class Student {
 
-    public String name;
-    public int studentId;
-    public int numberOfCredits = 0;
-    public double gpa = 0.0;
+    private String name;
+    private int studentId;
+    private int numberOfCredits = 0;
+    private double gpa = 0.0;
 
     public Student(String name, int studentId,
                    int numberOfCredits, double gpa) {
@@ -38,7 +38,7 @@ public class Student {
         public void setNumberOfCredits(int aNumberOfCredits) {
             numberOfCredits = aNumberOfCredits;
         }
-        public void setGpa(int aGpa) {
+        public void setGpa(double aGpa) {
             gpa = aGpa;
         }
 
