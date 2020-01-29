@@ -3,8 +3,8 @@ package exercises.technology;
 public class Laptop extends Computer {
     double size;
 
-    public Laptop (String brand, int price, double storage, double size) {
-        super(brand, price, storage);
+    public Laptop (int id, String brand, int price, double storage, double size) {
+        super(id, brand, price, storage);
         this.size = size;
     }
 
