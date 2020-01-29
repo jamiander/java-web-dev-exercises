@@ -1,8 +1,6 @@
 package org.launchcode.java.studios.FunWithQuizzes;
 
-import java.util.ArrayList;
-
-public class Question {
+public abstract class Question {
     String question;
     String answer;
 
@@ -10,4 +8,7 @@ public class Question {
         this.question = question;
         this.answer = answer;
     }
+
+    public abstract int gradeQuiz(Question question, String answer);
 }
+

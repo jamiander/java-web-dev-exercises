@@ -1,6 +1,5 @@
 package org.launchcode.java.studios.FunWithQuizzes;
-
-import java.lang.reflect.Array;
+;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -21,9 +20,22 @@ public class Quiz {
         for (Question item : quiz) {
             System.out.println(item.question);
             String ans = input.nextLine();
-            if (ans.equals(item.answer)) {
+
+            if (item instanceof MultipleChoice) {
+                score += item.gradeQuiz(item, ans);
+                }
+
+            if (item instanceof Checkbox) {
+                score += item.gradeQuiz(item, ans);
+                }
+
+            if (item instanceof TrueFalse) {
+                score += item.gradeQuiz(item, ans);
+                }
+
+            /*if (ans.equals(item.answer)) {
                 score++;
-            }
+            }*/
         }
         System.out.println("You scored " + score + " out of " + quiz.size());
     }
